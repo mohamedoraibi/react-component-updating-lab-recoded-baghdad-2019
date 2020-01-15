@@ -39,7 +39,8 @@ class App extends Component {
   handleAddTimer = () => {
     this.setState(prevState => ({
       timerIDs: [
-        ...prevState.timerIDs,
+        this.timer.current.style.color =
+  "#" + Math.floor(Math.random() * 16777215).toString(16);
         {
           updateInterval: prevState.updateInterval,
           id: Date.now()
